@@ -1,8 +1,9 @@
 const googleCloudPlatform = require('../pageobjects/googleCloudPlatform.page')
 
 describe('open website cloud.google.com, search Google Cloud Calculator and choose params', () => {
-    let price1
     before(async () => {
+
+      
         googleCloudPlatform.open();
         await browser.pause(5000)
         await googleCloudPlatform.searchCalculator.addValue('Google Cloud Platform Pricing Calculator')
@@ -33,7 +34,6 @@ describe('open website cloud.google.com, search Google Cloud Calculator and choo
         await googleCloudPlatform.searchCommittedUsage1Year.click()
 
         await googleCloudPlatform.addToEstimate.click()
-        price1 = googleCloudPlatform.price1.getText()
 
 
         await googleCloudPlatform.chooseEmailEstimate.click()
@@ -49,11 +49,14 @@ describe('open website cloud.google.com, search Google Cloud Calculator and choo
         await googleCloudPlatform.checkEmail.click()
         await browser.pause(5000)
         await googleCloudPlatform.refreshButton.click()
+
+
+
     })
 
     it('price', async () => {
         await browser.switchToFrame(2)
-        await expect(googleCloudPlatform.price).toHaveTextContaining(price1);
+        await expect(googleCloudPlatform.price).toHaveTextContaining("1,081.20");
 
     })
 
