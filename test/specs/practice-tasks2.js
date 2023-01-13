@@ -12,7 +12,7 @@ describe('Should create New Paste in website Pastebin.com with next params', () 
     await Pastebin.shoose10Minutes.click()
     await Pastebin.openPasteName.addValue('how to gain dominance among developers')
     await Pastebin.saveNewPaste.click()
-        await    browser.saveScreenshot('./wdio.png');
+        await browser.saveScreenshot('./wdio.png');
 
   })
 

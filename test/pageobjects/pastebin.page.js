@@ -8,6 +8,9 @@ class Pastebin extends Page {
     get openPasteName() {
         return $('#postform-name')
     }
+    get checkPasteName() {
+        return $('div.info-top')
+    }
 
     get openPasteExpiration() {
         return $('#select2-postform-expiration-container');
@@ -24,9 +27,15 @@ class Pastebin extends Page {
     get createCode() {
         return $('#postform-text')
     }
+    get checkCode() {
+        return $('div.source bash')
+    }
 
     get chooseBash() {
         return $(`//li[text()='Bash']`)
+    }
+    get checkBash() {
+        return $('a.btn -small.h_800')
     }
 
 get saveNewPaste(){
