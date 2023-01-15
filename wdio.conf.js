@@ -21,8 +21,20 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './Wdio-practice-tasks/test/specs/practice-tasks2.js'
+
+        './test/specs/practice-task4.js'
     ],
+
+    // suites:{
+    //       smoke:[
+    //     './test/specs/practice-task4.js'
+    //       ],
+
+    //       regression:[
+    //         './test/specs/*.js',
+    //       ]
+    // },
+
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
